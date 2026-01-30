@@ -4,6 +4,9 @@
 #include <string>
 #include <vector>
 #include <unordered_map>
+#include <filesystem>
+#include <iostream>
+#include <fstream>
 
 /* RomManager initializes with the folder path where the rom files are located.
  * We check that all the required rom files exist.
@@ -12,7 +15,7 @@
 
 class RomManager {
     public:
-    RomManager(const std::string& folderPath);
+    RomManager(const std::string& rom_folder_path);
     bool verifyRequiredRoms() const;
     std::unordered_map<std::string, std::vector<uint8_t>> loadRoms() const;
 
