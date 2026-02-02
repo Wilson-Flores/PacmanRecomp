@@ -10,7 +10,8 @@ set (SOURCES
         ${CMAKE_SOURCE_DIR}/src/main.cpp
         src/core/Z80Disassembler.cpp
         src/io/RomManager.cpp
-        src/utils/RomDumper.cpp)
+        src/utils/RomDumper.cpp
+        src/core/Z80InstructionTable.cpp)
 
 # Main executable
 add_executable(PacmanRecomp ${SOURCES})

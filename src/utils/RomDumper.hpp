@@ -18,6 +18,7 @@ void concatenateRoms(const std::unordered_map<std::string, std::vector<uint8_t>>
                      const std::vector<std::string>& rom_order,
                      const std::string& output_folder = "../rom_dumps");
 
+// create a txt file for the combined rom file
 void convertCombinedRomToText(const std::filesystem::path& input_rom_file,
                               const std::filesystem::path& output_text_file);
 
