@@ -98,26 +98,26 @@ Z80Instruction main_instruction_table[256] = {
     /* 0xC0 */
     {"RET NZ",1},{"POP BC",1},{"JP NZ,nn",3},{"JP nn",3},
     {"CALL NZ,nn",3},{"PUSH BC",1},{"ADD A,n",2},{"RST 00H",1},
-    {"RET Z",1},{"RET",1},{"JP Z,nn",3},{"CB",1},
+    {"RET Z",1},{"RET",1},{"JP Z,nn",3},{"BIT TABLE",1},
     {"CALL Z,nn",3},{"CALL nn",3},{"ADC A,n",2},{"RST 08H",1},
 
     /* 0xD0 */
     {"RET NC",1},{"POP DE",1},{"JP NC,nn",3},{"OUT (n),A",2},
     {"CALL NC,nn",3},{"PUSH DE",1},{"SUB n",2},{"RST 10H",1},
     {"RET C",1},{"EXX",1},{"JP C,nn",3},{"IN A,(n)",2},
-    {"CALL C,nn",3},{"DD",1},{"SBC A,n",2},{"RST 18H",1},
+    {"CALL C,nn",3},{"IX TABLE",1},{"SBC A,n",2},{"RST 18H",1},
 
     /* 0xE0 */
     {"RET PO",1},{"POP HL",1},{"JP PO,nn",3},{"EX (SP),HL",1},
     {"CALL PO,nn",3},{"PUSH HL",1},{"AND n",2},{"RST 20H",1},
     {"RET PE",1},{"JP (HL)",1},{"JP PE,nn",3},{"EX DE,HL",1},
-    {"CALL PE,nn",3},{"ED",1},{"XOR n",2},{"RST 28H",1},
+    {"CALL PE,nn",3},{"MISC TABLE",1},{"XOR n",2},{"RST 28H",1},
 
     /* 0xF0 */
     {"RET P",1},{"POP AF",1},{"JP P,nn",3},{"DI",1},
     {"CALL P,nn",3},{"PUSH AF",1},{"OR n",2},{"RST 30H",1},
     {"RET M",1},{"LD SP,HL",1},{"JP M,nn",3},{"EI",1},
-    {"CALL M,nn",3},{"FD",1},{"CP n",2},{"RST 38H",1}
+    {"CALL M,nn",3},{"IY TABLE",1},{"CP n",2},{"RST 38H",1}
 };
 
 
